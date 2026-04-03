@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#a98fff",
+              "primary-fixed-dim": "#9c7eff",
+              "secondary-container": "#5d2c92",
+              "on-secondary-fixed-variant": "#67389d",
+              "on-error": "#490013",
+              "surface": "#0e0e0e",
+              "inverse-primary": "#6834eb",
+              "outline-variant": "#494847",
+              "inverse-on-surface": "#565554",
+              "tertiary-container": "#fc81ab",
+              "surface-variant": "#262626",
+              "surface-container-highest": "#262626",
+              "error-container": "#a70138",
+              "tertiary-dim": "#ef77a0",
+              "on-secondary-fixed": "#49147f",
+              "primary-dim": "#7e51ff",
+              "on-tertiary-fixed-variant": "#70103b",
+              "on-primary": "#340090",
+              "on-primary-fixed": "#000000",
+              "on-tertiary": "#6a0936",
+              "on-primary-container": "#280072",
+              "error": "#ff6e84",
+              "surface-container-lowest": "#000000",
+              "secondary-fixed": "#e3c6ff",
+              "primary-container": "#a98fff",
+              "on-secondary": "#3e0174",
+              "surface-tint": "#b6a0ff",
+              "secondary-fixed-dim": "#d8b5ff",
+              "tertiary": "#ff97b8",
+              "on-tertiary-container": "#59002b",
+              "on-background": "#ffffff",
+              "on-tertiary-fixed": "#380019",
+              "on-surface-variant": "#adaaaa",
+              "tertiary-fixed-dim": "#f57ca5",
+              "on-primary-fixed-variant": "#32008a",
+              "background": "#0e0e0e",
+              "inverse-surface": "#fcf8f8",
+              "surface-container-high": "#201f1f",
+              "secondary-dim": "#b987f2",
+              "surface-container-low": "#131313",
+              "on-secondary-container": "#e2c5ff",
+              "surface-bright": "#2c2c2c",
+              "secondary": "#c492fe",
+              "tertiary-fixed": "#ff8db2",
+              "on-surface": "#ffffff",
+              "error-dim": "#d73357",
+              "surface-container": "#1a1919",
+              "primary": "#b6a0ff",
+              "outline": "#777575",
+              "surface-dim": "#0e0e0e",
+              "on-error-container": "#ffb2b9"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(14, 14, 14, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .grayscale-hover {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease, transform 0.7s ease, blur 0.5s ease;
+        }
+        .group:hover .grayscale-hover {
+            filter: grayscale(0%) blur(4px);
+            transform: scale(1.05);
+        }
+        .project-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+        .group:hover .project-overlay {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl border-b border-white/5">
+<nav class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">HÉLIO W FILHO</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline tracking-tight" href="index.html">Home</a>
+<a class="text-[#b6a0ff] font-bold border-b border-[#b6a0ff]/30 font-headline tracking-tight" href="projetos.html">Projetos</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline tracking-tight" href="sobre.html">Sobre Mim</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors font-headline tracking-tight" href="contatos.html">Contatos</a>
+</div>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-8 max-w-[1440px] mx-auto mb-24 text-center">
+<div class="flex flex-col items-center">
+<span class="text-primary font-label text-sm tracking-[0.2em] uppercase mb-4 block">Portfólio Selecionado</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8">
+                    Meus Projetos
+                </h1>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-3xl leading-[1.6]">Projetos digitais completos, incluindo sites, Micro SaaS, identidade visual e edição de vídeos. Estratégia e impacto para transformar ideias em soluções digitais eficientes.</p>
+</div>
+</section>
+
+<!-- Projects Grid -->
+<section class="px-8 max-w-[1440px] mx-auto mb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Card 1: Sites Institucionais -->
+<div class="group flex flex-col gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-500 hover:bg-surface-container-high text-center overflow-hidden border border-white/5">
+<div class="relative aspect-[16/10] overflow-hidden rounded-md bg-black">
+<img alt="Professional corporate website on multiple devices" class="w-full h-full object-cover grayscale-hover" src="https://lh3.googleusercontent.com/aida/ADBb0uji-InkzIObSIfcMx0z5k16wXd_l2dFa4jaEIPiEQWyaisy-c5Pi5vIVzYglVlL6KNBn0HKSpQSDwY-dfQAssQ7S_9vYLFqqaxVFQQYrrkm_BsAYmq6Tar92-1D2-LEhKXvugqFkYM9t7IX_5zLlo4GmZqPYTefWABDoXk3s0TICJD9pfFPCyKB2zOPlh_0HiA3NK4xLb261usXjFGPiJ_0alUT-6P3JQNpcSH1-KxtARujA0kROCe4dJ1qcibgS66P-dFp-y9MZDc"/>
+<div class="absolute inset-0 project-overlay flex items-center justify-center">
+<span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-headline text-lg font-bold border border-white/30 px-6 py-2">Ver Projeto</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<h3 class="font-headline text-3xl font-bold text-white mb-4">Sites Institucionais</h3>
+<p class="text-on-surface-variant font-body max-w-[85%] mb-8 leading-relaxed">Sites institucionais estratégicos, criados para fortalecer marcas e gerar resultados reais no ambiente digital.</p>
+<button class="flex items-center gap-2 text-primary font-bold group/btn border-b border-primary/0 hover:border-primary transition-all">
+<span class="text-sm">DETALHES DO SERVIÇO</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Landing Pages -->
+<div class="group flex flex-col gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-500 hover:bg-surface-container-high text-center overflow-hidden border border-white/5 md:mt-12">
+<div class="relative aspect-[16/10] overflow-hidden rounded-md bg-black">
+<img alt="Modern landing page mockup with high conversion focus" class="w-full h-full object-cover grayscale-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY9zxX8K3S-rzfYjrXzorRlU6hw2IvD42stWJ6BkrEM40whSy3eP5fQxUItVN6R79ZBIgHxsDhfd-GtkXJcEM_o9Cc-_MVasIucMgZQxVDG_yNYWZYAKsg7_gReKh2Y_bDBd9dEFc4NpWt3oishH75ZID8_FrrdsnKOShUp3jr_f0SXrUQs2gPdcuJWzSyvYc5vbJpDYIw3r155lAxJETtt6c01XbvHgLmaI4jjLEU7fclHxCOUpyDaMKLw_SWM7mVGrChcerjYUGE"/>
+<div class="absolute inset-0 project-overlay flex items-center justify-center">
+<span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-headline text-lg font-bold border border-white/30 px-6 py-2">Ver Landing Page</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<h3 class="font-headline text-3xl font-bold text-white mb-4">Landing Pages de Alta Conversão</h3>
+<p class="text-on-surface-variant font-body max-w-[85%] mb-8 leading-relaxed">Páginas focadas em conversão, criadas para campanhas e captação de leads qualificados.</p>
+<button class="flex items-center gap-2 text-primary font-bold group/btn border-b border-primary/0 hover:border-primary transition-all">
+<span class="text-sm">DETALHES DO SERVIÇO</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Micro SaaS -->
+<div class="group flex flex-col gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-500 hover:bg-surface-container-high text-center overflow-hidden border border-white/5">
+<div class="relative aspect-[16/10] overflow-hidden rounded-md bg-black">
+<img alt="Technical dashboard interface with data visualization" class="w-full h-full object-cover grayscale-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-SRhQ3W9ADSAXA7BwPTgeYZCQA5pSvEhTjOwcthOL3oFGeCxIrbPtumD0XbOffEl-LTKocjP6lj03fmvBUIe028zffZPpoQz3RHKnkNL6qmgkOhDOitEK3fYid--A5AOXuR4Ivci7gsqcT4jRA-MC_1pxtLK5kuyg7TzFhO2ZJObCFGjd8iw8wjX2TVhtxCdaOq7ACm8q3W9FZk7m7RBoHlUIomJ4MELOwQLdz6TLMWoMjJmwXYb9MB4eo8K1ZwOVcvP0a-zim2iG"/>
+<div class="absolute inset-0 project-overlay flex items-center justify-center">
+<span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-headline text-lg font-bold border border-white/30 px-6 py-2">Ver Sistema</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<h3 class="font-headline text-3xl font-bold text-white mb-4">Micro SaaS &amp; Sistemas Web</h3>
+<p class="text-on-surface-variant font-body max-w-[85%] mb-8 leading-relaxed">Desenvolvimento de sistemas e ferramentas digitais sob medida para automatizar processos e gerar escala.</p>
+<button class="flex items-center gap-2 text-primary font-bold group/btn border-b border-primary/0 hover:border-primary transition-all">
+<span class="text-sm">DETALHES DO SERVIÇO</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Design & Conteúdo -->
+<div class="group flex flex-col gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-500 hover:bg-surface-container-high text-center overflow-hidden border border-white/5 md:mt-12">
+<div class="relative aspect-[16/10] overflow-hidden rounded-md bg-black">
+<img alt="Creative brand identity elements and social media content" class="w-full h-full object-cover grayscale-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXNf7qedznz9Cd34nlJLnm9B44IFF5Z3KQkxySs-WiN7_tg0TjLEyW918XR6qEs8lf_TglzBPh4SnNRywrUylGbqfWLpAsH28k2EwB1HnEn0XHMSpYReQb3EJYTvI7gViPg4hNSUJb-QkTRQ4kB3WMn2SSyQfdRSYqRJYqbZOZZ1kuKdjkzO3iBrMWhPB5LGoyAV3Jj8AS04MEvCPSTbPbS5ASQaOwMtD183XVWMSmfOOQOTIdPEQzOlxRyP00LwvN9odicbiKkIUn"/>
+<div class="absolute inset-0 project-overlay flex items-center justify-center">
+<span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-headline text-lg font-bold border border-white/30 px-6 py-2">Ver Portfólio</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<h3 class="font-headline text-3xl font-bold text-white mb-4">Design &amp; Conteúdo Digital</h3>
+<p class="text-on-surface-variant font-body max-w-[85%] mb-8 leading-relaxed">Criação de identidades visuais, artes e conteúdos para fortalecer marcas e presença digital.</p>
+<button class="flex items-center gap-2 text-primary font-bold group/btn border-b border-primary/0 hover:border-primary transition-all">
+<span class="text-sm">DETALHES DO SERVIÇO</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-surface-container-low relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<div class="px-8 max-w-[1440px] mx-auto text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl font-bold text-white mb-8">Pronto para elevar seu digital?</h2>
+<p class="text-on-surface-variant text-xl mb-12 max-w-xl mx-auto">Vamos transformar sua visão em uma realidade técnica impecável.</p>
+<button class="bg-gradient-to-br from-primary-dim to-primary text-on-primary px-10 py-4 font-bold text-lg hover:scale-105 transition-transform duration-300 rounded-sm">
+                    Iniciar um Projeto
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 border-t border-[#494847]/15 bg-[#0e0e0e]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto gap-8">
+<div class="text-lg font-black text-white font-headline uppercase tracking-widest">HÉLIO W FILHO</div>
+
+<div class="text-[#adaaaa] font-body text-[10px] tracking-widest uppercase text-center md:text-right">
+                © 2026 HÉLIO WEB DESIGNER. ALL RIGHTS RESERVED
+            </div>
+</div>
+</footer>
+</body></html>
