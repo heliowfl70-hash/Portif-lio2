@@ -94,7 +94,21 @@
 <!-- TopNavBar Shell -->
 <header class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl">
 <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-<div class="text-2xl font-bold tracking-tighter text-white font-space" style="">
+
+<button onclick="toggleMenu()" class="md:hidden z-[60] relative w-8 h-8 flex flex-col justify-between">
+  <span id="line1" class="block h-0.5 bg-white rounded transition-all duration-300"></span>
+<span id="line2" class="block h-0.5 bg-white rounded transition-all duration-300"></span>
+<span id="line3" class="block h-0.5 bg-white rounded transition-all duration-300"></span>
+</button>
+<div id="mobileMenu" class="fixed top-0 left-0 w-screen h-screen z-50 bg-black/95 backdrop-blur-md flex flex-col justify-center items-center space-y-8 text-white text-2xl transform translate-x-full transition-transform duration-300 md:hidden">
+  
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="projetos.html" onclick="toggleMenu()">Projetos</a>
+  <a href="sobre.html" onclick="toggleMenu()">Sobre Mim</a>
+  <a href="contatos.html" onclick="toggleMenu()">Contatos</a>
+
+</div>
+  <div class="text-2xl font-bold tracking-tighter text-white font-space" style="">
                 Hélio W Filho</div>
 <div class="hidden md:flex items-center space-x-8 font-space tracking-tight">
 <a class="text-[#b6a0ff] font-bold border-b-2 border-[#b6a0ff] pb-1 hover:opacity-80 transition-all" href="index.html" style="">Home</a>
@@ -266,4 +280,48 @@
             </div>
 </div>
 </footer>
-</body></html>
+</body>
+
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const body = document.body;
+
+  const l1 = document.getElementById("line1");
+  const l2 = document.getElementById("line2");
+  const l3 = document.getElementById("line3");
+
+  const isOpen = menu.classList.contains("translate-x-0");
+
+  if (!isOpen) {
+    // abre menu
+    menu.classList.remove("translate-x-full");
+    menu.classList.add("translate-x-0");
+
+    // anima botão → X
+    l1.classList.add("rotate-45", "translate-y-3");
+    l2.classList.add("opacity-0");
+    l3.classList.add("-rotate-45", "-translate-y-3");
+
+    // trava scroll
+    body.style.overflow = "hidden";
+
+  } else {
+    // fecha menu
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("translate-x-full");
+
+    // volta botão
+    l1.classList.remove("rotate-45", "translate-y-3");
+    l2.classList.remove("opacity-0");
+    l3.classList.remove("-rotate-45", "-translate-y-3");
+
+    // libera scroll
+    body.style.overflow = "auto";
+  }
+}
+</script>
+
+
+</html>
